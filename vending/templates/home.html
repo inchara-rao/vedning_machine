@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2><b>I'm your vending Machine!</b></h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <h4> Enter  the number of coins:</h4>
+        Penny (1){{form.penny_1}}<br>
+        Nickel (5){{form.nickel_5}}<br>
+        Dime (10){{form.dime_10}}<br>
+        Quarter (25){{form.quarter_25}}<br>
+        <br>
+        <h4> Enter the number of items you want:</h4>
+        Soda (47){{ form.Soda}}<br>
+        Coke(25){{ form.Coke}}<br>
+        Pepsi(32) {{ form.Pepsi}}<br>
+
+        <h4>Check this only if you want to cancel</h4>
+        Cancel?{{ form.Cancel}}<br>
+        <input type="submit">
+
+    </form>
+    {% for message in messages%}
+    <h5>{{message}}</h5>
+    {% endfor %}
+</body>
+</html>

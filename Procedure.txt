@@ -1,0 +1,10 @@
+Procedure to run in windows:
+Library requirements:django, psycopg2
+Database:PostgreSQl
+Run the following commands after opening the terminal in the file location:
+1. python manage.py makemigrations
+2. python manage.py migrate
+3. python manage.py sqlmigrate vending_machine 0005
+4. python manage.py runserver
+
+The snippets are attached in snippets.docx
